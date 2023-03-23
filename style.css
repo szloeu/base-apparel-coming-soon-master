@@ -1,0 +1,218 @@
+:root {
+	font-size: 16px; 
+	/*This sets the font-size all over the document. Default: 16px;
+	You can set all other value relative to this value. I mean, this is the easiest way to 
+	changing a whole complex object with changing one value. See bottom the @media block.*/
+}
+
+body, html { 
+    margin: 0;
+    padding: 0;
+    /* Must both parameters set when vertical scrollbar appears with min-height: 100vh. */
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start; 
+  	justify-content: space-between; 
+  	height: 100vh;
+  	background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  	
+}
+
+#div-id-hero {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-image: url(./images/bg-pattern-desktop.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-left: 10.5vw;
+}
+
+#div-id-logo-holder {
+	display: flex;
+	flex-direction: row;
+	width: 30vw;
+}
+
+#img-id-hero-mobile {
+	display: none;  This must set for start toggler as hidden and set as not place holder. 
+}
+
+#div-id-wrap {
+	width: 31vw;
+}
+
+#img-id-logo {
+	width: 36%;
+	margin-top: 8vh;
+}
+
+#p-id-we-are {
+	font-size: 4rem;
+	margin: 18vh 0 0; /* You can use relative height measure to whole viewport. */
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	color: hsl(0, 36%, 70%);
+	font-weight: 100;
+}
+
+h1 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 4rem;
+	letter-spacing: 1rem;
+	color: 	hsl(353, 7%, 24%);
+	font-weight: 600;
+}
+
+#p-id-hello {
+	color: hsl(0, 36%, 70%);
+	line-height: 180%;
+	margin: 1rem 0 2rem;
+}
+
+#div-id-mail {
+	height: 3.5rem;
+	width: 100%;
+	border: 1px solid hsl(348, 17%, 83%);
+	border-radius: 1.75rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#p-id-mail {
+	color: hsl(348, 17%, 83%);
+	margin-left: 2rem;
+}
+
+#input-id-mail {
+	border: 0;
+	height: 3rem;
+	width: 100%;
+	color: hsl(348, 17%, 83%);
+	margin-left: 2rem;
+	background: none;
+}
+
+#input-id-mail:focus {
+	outline: none;
+}
+
+#div-id-mail-right-block {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#img-id-error {
+	margin-right: 1rem;
+	height: 1.5rem;
+	width: 1.5rem;
+	visibility: hidden;
+}
+
+#div-id-send {
+	background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	width: 6rem;
+	height: 3.5rem;
+	border-radius: 1.75rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#div-id-send:hover {
+	background-image: linear-gradient(to right, hsl(358, 89%, 93%), hsl(0, 77%, 88%));
+	cursor: pointer;
+}
+
+#p-id-please {
+	color: hsl(0, 93%, 68%);
+	font-size: 0.8rem;
+	margin-left: 2rem;
+	visibility: hidden;
+}
+
+#img-id-hero-desktop {
+	height: 100vh;
+}
+
+@media (max-width: 1060px) {
+
+	main {
+		background-size: contain;
+		height: auto;
+	}
+
+	#img-id-hero-desktop {
+		display: none;  This must set for start toggler as hidden and set as not place holder. 
+	}
+
+	#img-id-hero-mobile {
+		display: block;
+	}
+
+	#div-id-hero {
+		height: auto;
+		padding-left: 0;
+		align-items: center;
+		background-image: none;
+	}
+
+	#div-id-wrap {
+		width: 23.4375rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#div-id-logo-holder {
+		width: 23.4375rem;
+	}
+
+	#img-id-logo {
+		margin: 2rem 0 2rem 2rem;
+		width: 25%;
+	}
+
+	#p-id-we-are {
+		text-align: center;
+		font-size: 2.3rem;
+		margin: 4rem 0 0;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 2.3rem;
+	}
+
+	#p-id-hello {
+		text-align: center;
+		font-size: 0.9rem;
+		width: 20rem;
+	}
+
+	#div-id-mail {
+		height: 2.5rem;
+		width: 20rem;
+	}
+
+	#div-id-send {
+		height: 2.5rem;
+		width: 3.5rem;
+	}
+
+}
